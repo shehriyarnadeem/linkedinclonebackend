@@ -1,0 +1,38 @@
+import React, { useEffect, useState } from "react";
+import HttpService from "../HttpService";
+import StartPost from "./StartPost";
+import Post from "./Post";
+import "./Feeds.css";
+
+function Feeds() {
+  const [posts, setPosts] = useState(null);
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    async function getPosts() {
+      try {
+        const result = await HttpService.get("/posts");
+        console.log(result);
+
+        setPosts(result.data);
+      } catch (e) {
+        setPosts(null);
+      }
+    }
+    getPosts();
+  }, []);
+
+  console.log(posts, "wowow");
+
+  return (
+    <div className="feeds">
+      <StartPost />
+      <div className="feed__Post">
+        {/* {posts.map((post) => {
+          return <Post data={post} />;
+        })} */}
+      </div>
+    </div>
+  );
+}
+
+export default Feeds;

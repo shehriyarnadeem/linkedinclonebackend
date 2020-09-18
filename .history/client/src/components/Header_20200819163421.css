@@ -1,0 +1,55 @@
+.header {
+  background-color: var(--linkedin-background);
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.header__left {
+  flex: 0.3;
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  margin-left: 120px;
+}
+
+.header__left > input {
+  width: 60%;
+  border-radius: 2px;
+
+  color: rgba(var(--cool-gray-80, #283e4a), 0.75);
+  font-weight: 400;
+  font-size: 14px;
+  height: 34px;
+  background-color: var(--cool-gray-30, #e1e9ee);
+  border-color: var(--cool-gray-30, #e1e9ee);
+}
+
+.header__menu {
+  display: flex;
+  flex: 0.4;
+  width: 100%;
+  padding: 10px;
+  justify-content: space-evenly;
+}
+
+.header__menu > .MuiSvgIcon-root {
+  font-size: 40px;
+  color: white;
+}
+
+.header__menu > .MuiSvgIcon-root:hover {
+  color: black;
+}
+
+.header__right {
+  display: flex;
+  flex: 0.3;
+  padding: 10px;
+  justify-content: space-evenly;
+}
+
+.header__right > .MuiSvgIcon-root {
+  font-size: 40px;
+  color: white;
+}

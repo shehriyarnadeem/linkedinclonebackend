@@ -1,0 +1,14 @@
+.feeds {
+  flex: 0.4;
+  margin-top: 50px;
+  min-width: fit-content;
+  overflow-y: scroll;
+}
+
+.feeds::-webkit-scrollbar {
+  display: none;
+}
+
+.feed__Post {
+  margin-top: 10px;
+}
